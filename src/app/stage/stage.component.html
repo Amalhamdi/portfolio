@@ -1,0 +1,40 @@
+<div class="container"  style="width: 55rem;">
+    <h2 align="center">Liste De Mes Stages  </h2>
+    <div class="card shadow mb-4  "> 
+
+        <!--les diplomes -->
+    <div class="card">
+    
+    <table width="100%">
+    <thead>
+    <tr align="center">
+    <th>   </th>
+   <th> Organisme D'acceuil </th>
+   <th> Date  </th>
+   <th> Lieu </th>
+   <th> Type De Stage </th>
+   <th *ngIf = "authServ.testerAdmin()"> Action </th>
+    </tr>
+    </thead> 
+    <tbody *ngFor="let st of tab_stage">
+    <tr align="center">
+    <td>{{st.num}}</td>
+    <td>{{st.acceuil}}</td>
+    <td>{{st.date | date:'dd/MM/yyyy'}}</td>
+    <td>{{st.lieu}}</td>
+    <td>{{st.type!.nom}}</td>
+    <td *ngIf = "authServ.testerAdmin()">
+        <a class="btn btn-outline-danger btn-lg" (click)="suppStage(st)">
+            <img src="../assets/img/delete.png" height="32" width="32">
+        </a>
+        <a class="btn btn-outline-success btn-lg" [routerLink]="['/updatestage',st.num]">
+        <img src="../assets/img/modif.png" height="32" width="32"></a>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div> 
+    </div>
+  <div align="center" *ngIf = "authServ.testerAdmin()">
+    <a class="btn btn-outline-primary btn-lg" routerLink ="/addstage"> Ajouter </a>
+   </div>

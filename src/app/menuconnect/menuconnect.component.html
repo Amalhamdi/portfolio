@@ -1,0 +1,49 @@
+<div class="container purple topBotomBordersIn">
+    <nav class="navbar navbar-expand-sm bg-info navbar-light" >
+    
+     <a class="navbar-brand" routerLink="/" ><h3 class="animate-charcter"> Hamdi Amal </h3> </a>
+
+     <ul class="navbar-nav" *ngIf="!authServ.isConnected">
+      <li class="nav-item" >
+      <a class="nav-link" routerLink="/info"> Informations Générales </a>
+      </li>
+      <li class="nav-item" >
+         <a class="nav-link" routerLink="/competence" > Compétences </a>
+         </li>
+         <li class="nav-item" >
+             <a class="nav-link" routerLink="/dipfor"> Diplomes Et Formation </a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" routerLink="/stage" > Experiences Professionelles Et Stages </a>
+                 </li>
+      </ul> 
+  <!-- connected -->
+     <ul  class="navbar-nav" *ngIf="authServ.isConnected">
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/stage" >Stage</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" routerLink="/typestage"> Type De Stage </a>
+           </li>
+           </ul>
+  <!-- connected -->
+  <ul class="navbar-nav ml-auto" >
+   <li class="nav-item dropdown">
+       <ul class="navbar-nav ml-auto" >
+           <li class="nav-item dropdown">
+           <a *ngIf="authServ.isConnected" class="nav-link dropdown-toggle" 
+           routerLink="#" id="navbardrop" data-toggle="dropdown">
+           {{authServ.userCourant}}</a>
+           <a *ngIf="!authServ.isConnected" class="dropdown-item" routerLink = "/admin">Connexion</a>
+           <div class="dropdown-menu" *ngIf="authServ.isConnected">
+            <a *ngIf="authServ.isConnected" class="dropdown-item" (click) = "authServ.disconnect()">Déconnexion</a>
+           </div>
+           </li>
+           </ul>
+   </li>
+  </ul>
+ 
+</nav>   
+   </div>
+   <br> <br>
+

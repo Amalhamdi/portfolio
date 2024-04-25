@@ -1,0 +1,39 @@
+<div class="container"  style="width: 55rem;">
+     <h2 align="center">Liste Des Types de Stage  </h2>
+    <div class="card shadow mb-4  "> 
+
+        <!--les diplomes -->
+    <div class="card">
+    <table width="100%">
+    <thead>
+    <tr align="center">
+    <th>   </th>
+   <th> Nom </th>
+   <th> Obligation  </th>
+   <th> Paiement </th>
+   <th *ngIf = "authServ.testerAdmin()"> Action </th>
+    </tr>
+    </thead> 
+    <tbody *ngFor="let type of tab_type">
+    <tr align="center">
+    <td>{{type.code}}</td>
+    <td>{{type.nom}}</td>
+    <td><p *ngIf="type.obligation=='obligatoire' " [ngStyle]="oblStyle">{{type.obligation | uppercase}}</p>
+        <p *ngIf="type.obligation!='obligatoire' " [ngStyle]="noblStyle">{{type.obligation | uppercase }}</p>
+    </td>
+    <td>{{type.paiement}}</td>
+    <td *ngIf = "authServ.testerAdmin()">
+        <a class="btn btn-outline-danger btn-lg" (click)="suppType(type)">
+            <img src="../assets/img/delete.png" height="32" width="32">
+        </a>
+        <a class="btn btn-outline-success btn-lg" [routerLink]="['/updatetype',type.code]">
+        <img src="../assets/img/modif.png" height="32" width="32"></a>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div> 
+    </div>
+  <div align="center" *ngIf = "authServ.testerAdmin()">
+    <a class="btn btn-outline-primary btn-lg" routerLink ="/addtype"> Ajouter </a>
+   </div>

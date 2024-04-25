@@ -1,0 +1,75 @@
+table, th, td {
+   
+    border-collapse: collapse;
+    text-align: center;
+   }
+   th, td {
+    padding: 10px;
+    font-weight: bold;
+   }
+   tr:hover {
+    background-color:rgb(245, 252, 255);
+   }
+   th {
+    background-color:black;
+    color: white;
+ }
+ h2 {
+    color:black;
+    font-size: 35px;
+    font-family:monospace;
+    text-align: center;
+}
+
+h2 {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgb(13, 92, 116), rgb(206, 193, 193), rgb(105, 189, 238));
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 8s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+/* Basic setups */
+
+
+/* Bar setups */
+.skills-bar {
+  padding: 25px 30px;
+  width: 800px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+  border-radius:10px;
+  margin-left:280px;
+}
+
+.skills-bar .bar:not(first-child) {
+  margin: 20px 0;
+}
+
+.skills-bar .bar .info {
+  margin-bottom: 5px;
+}
+
+.skills-bar h1 {
+  text-align:center;
+  text-transform: uppercase;
+  text-shadow:
+    0px 2px 3px rgba(0,0,0,.4),
+    0px 4px 13px rgba(0,0,0,.1)
+    ;
+}
+

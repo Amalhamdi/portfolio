@@ -1,0 +1,92 @@
+<div class="container" align="center" style="width: 55rem;">
+    <h2> Mes Compétences</h2>
+       <div class="card-group shadow mb-4">
+       <div class="card" >
+       <table width="100%">
+       <thead>
+       <tr  align="center">
+       <th> LANGUE </th>
+       </tr>
+       </thead> 
+       <tbody *ngFor="let cmp of comp">
+        <tr  align="center">
+           <td>{{cmp.langue}}</td>
+        </tr>
+       </tbody>
+       </table>
+     </div> 
+      
+       <!--Framework-->
+       <div class="card" >
+           <table width="100%">
+           <thead>
+           <tr  align="center">
+           <th> FRAMEWORK </th>
+           </tr>
+           </thead> 
+           <tbody *ngFor="let frameworks of framework">
+            <tr  align="center">
+               <td>{{frameworks.framework}}</td>
+            </tr>
+           </tbody>
+           </table>
+         </div> 
+         <!--Framework-->
+         </div>
+   
+   
+       <!-- logiciel -->
+     <div class="card-group shadow mb-4">
+       <div class="card" >
+       <table width="100%">
+           <thead align="center">
+           <tr >
+          <th> LOGICIEL </th>
+           </tr>
+           </thead> 
+           <tbody *ngFor="let cmp of compt">
+            <tr align="center">
+             <td>{{cmp.logiciel}}</td>
+            </tr>
+           </tbody>
+           </table>
+          </div> 
+         <!-- logiciel -->
+   
+         <!-- langaue de programmation -->
+           <div class="card" >
+               <table width="100%">
+                   <thead align="center">
+                   <tr >
+                  <th > lANGUAGE DE PROGRAMMATION </th>
+                   </tr>
+                   </thead> 
+                   <tbody *ngFor="let lang of langp">
+                    <tr align="center">
+                       <td>{{lang.languageP}}</td>
+                    </tr>
+                   </tbody>
+                   </table>
+            </div> <!-- langaue de programmation -->
+   
+             <!--modelisation-->
+            <div class="card" >
+               <table width="100%">
+                   <thead align="center">
+                   <tr >
+                  <th > MODELISATION </th>
+                   </tr>
+                   </thead> 
+                   <tbody *ngFor="let models of model">
+                    <tr align="center">
+                       <td>{{models.modelisation}}</td>
+                    </tr>
+                   </tbody>
+                   </table>
+                  </div> 
+             <!--modelisation-->
+         </div>
+   </div>
+    <br>
+    <br>
+

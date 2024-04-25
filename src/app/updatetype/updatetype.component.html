@@ -1,0 +1,29 @@
+<div class="form">
+    <h2 align="center"> <u>Modifier</u> </h2>
+    <div class="input-container ic1">
+        <input readonly type="number" [(ngModel)]="typeCourant.code" name="id" name="code" class="input" placeholder=" " />
+      <div class="cut"></div>
+      <label for="code" class="placeholder"> Code </label>
+    </div>
+
+    <div class="input-container ic2">
+      <input type="text"[(ngModel)]= "typeCourant.nom"  name="nom" id="nom" class="input" placeholder=" " />
+      <div class="cut"></div>
+      <label for="nom" class="placeholder"> Nom </label>
+    </div>
+
+    <div class="input-container ic2"> 
+        <input type="text" [(ngModel)]="typeCourant.obligation"  name="obligation" class="input" placeholder=" " />
+      <div class="cut cut-short"></div>
+      <label for="obligation" class="placeholder"> Obligation </label>
+    </div>
+
+    <div class="input-container ic2"> 
+        <input type="text" [(ngModel)]="typeCourant.paiement"  name="paiement" class="input" placeholder=" " />
+      <div class="cut cut-short"></div>
+      <label for="paiement" class="placeholder"> paiement </label>
+    </div>
+ 
+    <button type="submit" (click)="modifType()" class="submit">Modifer</button>
+</div>
+<br> <br>

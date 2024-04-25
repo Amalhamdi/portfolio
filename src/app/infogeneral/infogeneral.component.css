@@ -1,0 +1,19 @@
+.rounded-circle {
+    border-radius: 100%;
+    opacity: 0.5;
+  }
+  img:hover {
+    opacity: 1.0;
+  }
+  img {
+    border-radius: 100%;
+  }
+ h3 {
+  color: rgb(46, 79, 141);
+ }
+ .shadow {
+  box-shadow: 0 .20rem 2rem rgba(204, 147, 147, 0.774)!important;
+}
+.card {
+  margin-left: 70px;
+}

@@ -1,0 +1,43 @@
+     <div class="form">
+    <h2 align="center"> <u>Modifier Un Stage</u>  </h2>
+    <div class="input-container ic1">
+        <input readonly type="number" [(ngModel)]="stageCourant.num" name="id" name="num" class="input" placeholder=" " />
+      <div class="cut"></div>
+      <label for="code" class="placeholder"> Code </label>
+    </div>
+
+    <div class="input-container ic2">
+      <input type="text"[(ngModel)]= "stageCourant.acceuil"  name="acceuil" id="organisme d'acceuil" class="input" placeholder=" " />
+      <div class="cut"></div>
+      <label for="acceuil" class="placeholder"> organisme d'acceuil</label>
+    </div>
+
+    <div class="input-container ic2"> 
+        <input type="text" [(ngModel)]="stageCourant.lieu"  name="lieu" class="input" placeholder=" " />
+      <div class="cut cut-short"></div>
+      <label for="lieu" class="placeholder"> lieu </label>
+    </div>
+
+    <div class="input-container ic2">
+        <input type="date" [ngModel]="stageCourant.date | date: 
+        'yyyy-MM-dd'" (ngModelChange)=" stageCourant.date= $event" 
+        name="date"  class="input" placeholder=" " />
+      <div class="cut cut-short"></div>
+      <label for="date" class="placeholder"> date </label>
+    </div> 
+
+
+    <div class="input-container ic2">
+       
+        <select class="input" id="code" name="code" 
+        [(ngModel)]="idtModifie" placeholder=" ">
+        <option *ngFor="let type of tab_type" [value]=" type.code"> 
+        {{ type.nom}}</option>
+        </select>
+        <div class="cut cut-short"></div>
+         <label for = "type de stage" class="placeholder"> Type de Stage </label>
+    </div> 
+    
+    <button type="submit" (click)="modifStage()" class="submit">Modifer</button>
+</div>
+<br> <br>

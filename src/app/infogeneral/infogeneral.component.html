@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="row">
+    <div class="card-wrapper">
+      <div id="card-1" class="card card-rotating text-center">
+    
+        <!-- Front Side -->
+        <div class="face front">
+          <!-- Avatar -->
+          <div class="avatar mx-auto white"><img src="assets/img/amal.png" height="250px" width="250px" class="rounded-circle"
+              alt="Sample avatar image.">
+          </div>
+    
+          <!-- Content -->
+          <div class="card-body">
+            <h4 class="font-weight-bold mb-3"> Hamdi Amal </h4>
+            <p class="font-weight-bold blue-text"> Etudiante à Iset Nabeul  </p>
+          
+          </div>
+        </div></div>
+        <br> <br> <br> 
+      <div class="row" align="center">
+          <!--information generale -->
+          <div class="col-md-4">
+      <tbody *ngFor="let infos of info">
+          <ul> <b> <h3>Informations générales : </h3> </b> 
+               
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-hearts" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M11.5 1.246c.832-.855 2.913.642 0 2.566-2.913-1.924-.832-3.421 0-2.566ZM9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276ZM15 2.165c.555-.57 1.942.428 0 1.711-1.942-1.283-.555-2.281 0-1.71Z"/>
+                    </svg>
+              <i class="bi bi-person-hearts">  <b>  Nom et Prénom : </b> <br> </i>
+             {{infos.nom}} {{infos.prenom}}  
+              
+              <br> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-heart-fill" viewBox="0 0 16 16">
+                  <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5Zm-2 4v-1c0-.276.244-.5.545-.5h10.91c.3 0 .545.224.545.5v1c0 .276-.244.5-.546.5H2.545C2.245 5 2 4.776 2 4.5Zm6 3.493c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+                </svg>
+              <i class="bi bi-calendar2-heart-fill"><b> Date De Naissance : </b> <br> </i>
+                  {{infos.dateN | date:'dd/MM/yyyy' }} 
+                  <br> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-paper-heart-fill" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="m3 7.5 3.5 2L8 8.75l1.5.75 3.5-2v-6A1.5 1.5 0 0 0 11.5 0h-7A1.5 1.5 0 0 0 3 1.5v6ZM2 3.133l-.941.502A2 2 0 0 0 0 5.4v.313l2 1.173V3.133Zm12 3.753 2-1.173V5.4a2 2 0 0 0-1.059-1.765L14 3.133v3.753Zm-3.693 3.324L16 6.873v6.5l-5.693-3.163Zm5.634 4.274L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516ZM5.693 10.21 0 13.372v-6.5l5.693 3.338ZM8 1.982C9.664.309 13.825 3.236 8 7 2.175 3.236 6.336.31 8 1.982Z"/>
+                    </svg>
+                  <i class="bi bi-envelope-paper-heart-fill"> <b> Email : </b> <br> </i>
+                {{infos.email}} 
+                 <br> 
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                </svg>
+                 <i class="bi bi-telephone-fill"> <b> Telephone : </b> <br></i>
+                 +216{{infos.tel}} 
+          </ul>
+          <img src="assets/img/info.webp" height="180px" width="180px">
+      </tbody>
+      
+          </div>
+          <!--information generale -->
+  
+          <!-- centre d'interet  -->
+      <div class="col-md-4"> <b> <h3> Mes centres d'interet :</h3></b> 
+          <tbody *ngFor="let interet of hobbies">
+            
+              <ul>  
+                  <li> {{interet.hobby}} </li> 
+              </ul>
+          </tbody>
+          <br> <br>
+           <img src="assets/img/hobby.jpg" height="180px" width="180px">
+      </div>
+           <!-- centre d'interet  -->
+  
+            <!-- Vie associative  -->
+      <div class="col-md-4">
+          <b> <h3>Vie Associative :</h3> </b>
+          <tbody *ngFor="let club of clubs">
+              <ul>  
+                  <li> {{club.vieassociat}} </li> 
+              </ul>
+          </tbody> 
+          <br>
+          <img src="assets/img/vie.jpg" height="180px" width="180px">
+              </div> 
+         <!-- Vie associative  -->
+  </div>
+  </div>
+  
+  <br> <br> <br> <br> <br>
+  
+  <!-- Rotating card -->
+      </div>
+    </div>

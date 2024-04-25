@@ -1,0 +1,57 @@
+<div class="container"  style="width: 55rem;">
+    <h2 align="center">Liste De Mes Diplomes  </h2>
+    <div class="card shadow mb-4  "> 
+
+        <!--les diplomes -->
+    <div class="card">
+    <table width="100%">
+    <thead>
+    <tr align="center">
+    <th>  </th>
+   <th> Nom </th>
+   <th> Date D'obtention </th>
+   <th> Lieu </th>
+    </tr>
+    </thead> 
+    <tbody *ngFor="let dip of diplomes">
+    <tr align="center">
+    <td>{{dip.id}}</td>
+    <td>{{dip.nom}}</td>
+    <td>{{dip.dateD | date:'dd/MM/yyyy'}}</td>
+    <td>{{dip.lieu}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div> 
+    </div>
+ 
+             <!--les diplomes -->
+
+              <!--les formations --> 
+               <h2 align="center">Liste De Mes Formations</h2>
+              <div class="card shadow mb-4"> 
+             <div class="card">
+        <table width="100%">
+        <thead>
+        <tr align="center">
+        <th>  </th>
+       <th> Nom </th>
+       <th> Date D'obtention </th>
+       <th> Lieu </th>
+        </tr>
+        </thead> 
+        <tbody *ngFor="let for of formations">
+        <tr align="center">
+        <td>{{for.id}}</td>
+        <td>{{for.nom}}</td>
+        <td>{{for.dateF | date:'dd/MM/yyyy'}}</td>
+        <td>{{for.lieu}}</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        
+                 <!--les formations -->
+    </div>
+</div>
+
